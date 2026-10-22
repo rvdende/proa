@@ -1,0 +1,44 @@
+{
+  "$schema": "https://proa.so/schema/ui-component-manifest-v1.json",
+  "cargoDependencies": [],
+  "dependencies": [
+    "@proa/foundation"
+  ],
+  "files": [
+    {
+      "sha256": "sha256:f82ce5d251dcf715b90b06e17dab59698c18ecbcc3ae39b9d54e4545b63d1867",
+      "source": "artifacts/sha256/f82ce5d251dcf715b90b06e17dab59698c18ecbcc3ae39b9d54e4545b63d1867/table/table/md.rs",
+      "target": "@components/table/md.rs"
+    },
+    {
+      "sha256": "sha256:158651470cdbdf972163ad5a16372b095d3389cb39f75af5359b37cf538dc145",
+      "source": "artifacts/sha256/158651470cdbdf972163ad5a16372b095d3389cb39f75af5359b37cf538dc145/table/table/mod.rs",
+      "target": "@components/table/mod.rs"
+    },
+    {
+      "sha256": "sha256:d972ad443611f26490181efbce35a6a64a6b04c65c59a0ce8b167bbf56738eef",
+      "source": "artifacts/sha256/d972ad443611f26490181efbce35a6a64a6b04c65c59a0ce8b167bbf56738eef/table/table/recipe.rs",
+      "target": "@components/table/recipe.rs"
+    },
+    {
+      "sha256": "sha256:59dd34483ff141411524ee1049000cc0eaf851aab0010fe1e226acbadb3cb5c3",
+      "source": "artifacts/sha256/59dd34483ff141411524ee1049000cc0eaf851aab0010fe1e226acbadb3cb5c3/table/table/table.rs",
+      "target": "@components/table/table.rs"
+    }
+  ],
+  "kind": "component",
+  "license": "MIT OR Apache-2.0",
+  "name": "table",
+  "registry": "@proa",
+  "rustModules": [
+    {
+      "modules": [
+        "table"
+      ],
+      "target": "@components/mod.rs"
+    }
+  ],
+  "schemaVersion": 1,
+  "tier": "free",
+  "version": "sha256:6293ad723e10f032cd1b03e377ac15b27a13c9dadbd45551cd9f5baefc3fd413"
+}

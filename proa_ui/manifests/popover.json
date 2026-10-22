@@ -1,0 +1,44 @@
+{
+  "$schema": "https://proa.so/schema/ui-component-manifest-v1.json",
+  "cargoDependencies": [],
+  "dependencies": [
+    "@proa/foundation"
+  ],
+  "files": [
+    {
+      "sha256": "sha256:0740c66b5f784b20754d134d053dacad918c6cb5c8e5b5e96138ce33beb37c32",
+      "source": "artifacts/sha256/0740c66b5f784b20754d134d053dacad918c6cb5c8e5b5e96138ce33beb37c32/popover/popover/md.rs",
+      "target": "@components/popover/md.rs"
+    },
+    {
+      "sha256": "sha256:9f3eadfe4f55fefb1f8d10b72b5b258f7715a870f6bf8ca144444a8163b73ec9",
+      "source": "artifacts/sha256/9f3eadfe4f55fefb1f8d10b72b5b258f7715a870f6bf8ca144444a8163b73ec9/popover/popover/mod.rs",
+      "target": "@components/popover/mod.rs"
+    },
+    {
+      "sha256": "sha256:4bdab4e780610ca0c43591dc009c465a4b850459a0b9d895a76bf9050c7aa849",
+      "source": "artifacts/sha256/4bdab4e780610ca0c43591dc009c465a4b850459a0b9d895a76bf9050c7aa849/popover/popover/popover.rs",
+      "target": "@components/popover/popover.rs"
+    },
+    {
+      "sha256": "sha256:01d963a16db61196d33ebdee64a024efce4eeb3942009eaec80ccce7008eee17",
+      "source": "artifacts/sha256/01d963a16db61196d33ebdee64a024efce4eeb3942009eaec80ccce7008eee17/popover/popover/recipe.rs",
+      "target": "@components/popover/recipe.rs"
+    }
+  ],
+  "kind": "component",
+  "license": "MIT OR Apache-2.0",
+  "name": "popover",
+  "registry": "@proa",
+  "rustModules": [
+    {
+      "modules": [
+        "popover"
+      ],
+      "target": "@components/mod.rs"
+    }
+  ],
+  "schemaVersion": 1,
+  "tier": "free",
+  "version": "sha256:a1f072b9f43de60c9de076ea86aa38ab6161078cb60b844e8405013b5d724f33"
+}

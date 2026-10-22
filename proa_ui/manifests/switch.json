@@ -1,0 +1,44 @@
+{
+  "$schema": "https://proa.so/schema/ui-component-manifest-v1.json",
+  "cargoDependencies": [],
+  "dependencies": [
+    "@proa/foundation"
+  ],
+  "files": [
+    {
+      "sha256": "sha256:13f8561a0fe97635feaa7bd1c7723a8e156e50ab398164c9e5a5c815edafa136",
+      "source": "artifacts/sha256/13f8561a0fe97635feaa7bd1c7723a8e156e50ab398164c9e5a5c815edafa136/switch/switch/md.rs",
+      "target": "@components/switch/md.rs"
+    },
+    {
+      "sha256": "sha256:85be858573d8ac93c5f5c00529308d9d7bbbeacf29c983cc5d8f4d3935736033",
+      "source": "artifacts/sha256/85be858573d8ac93c5f5c00529308d9d7bbbeacf29c983cc5d8f4d3935736033/switch/switch/mod.rs",
+      "target": "@components/switch/mod.rs"
+    },
+    {
+      "sha256": "sha256:5a89e74cdb5ab3500619eb471b743d1adb494e9962a1665b4c0e092c69f44e68",
+      "source": "artifacts/sha256/5a89e74cdb5ab3500619eb471b743d1adb494e9962a1665b4c0e092c69f44e68/switch/switch/recipe.rs",
+      "target": "@components/switch/recipe.rs"
+    },
+    {
+      "sha256": "sha256:568790da0d652d613097424bd2679e3bf6efbcc22a8e0051f80624d0a26d308c",
+      "source": "artifacts/sha256/568790da0d652d613097424bd2679e3bf6efbcc22a8e0051f80624d0a26d308c/switch/switch/switch.rs",
+      "target": "@components/switch/switch.rs"
+    }
+  ],
+  "kind": "component",
+  "license": "MIT OR Apache-2.0",
+  "name": "switch",
+  "registry": "@proa",
+  "rustModules": [
+    {
+      "modules": [
+        "switch"
+      ],
+      "target": "@components/mod.rs"
+    }
+  ],
+  "schemaVersion": 1,
+  "tier": "free",
+  "version": "sha256:89ea7bff639669e5477655cbbce2a4c95693e32227b3679af8f869a7fee837fc"
+}

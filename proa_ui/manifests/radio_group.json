@@ -1,0 +1,44 @@
+{
+  "$schema": "https://proa.so/schema/ui-component-manifest-v1.json",
+  "cargoDependencies": [],
+  "dependencies": [
+    "@proa/foundation"
+  ],
+  "files": [
+    {
+      "sha256": "sha256:7f1162b47733ac99b8f7c55db2e8c4a73b1f16724bf3ee77483838fa8f863b34",
+      "source": "artifacts/sha256/7f1162b47733ac99b8f7c55db2e8c4a73b1f16724bf3ee77483838fa8f863b34/radio_group/radio_group/md.rs",
+      "target": "@components/radio_group/md.rs"
+    },
+    {
+      "sha256": "sha256:470fdf9cb1d1e5b098ec1851ff3ede9d662ab3f3b1d211e29516c8981ac8c745",
+      "source": "artifacts/sha256/470fdf9cb1d1e5b098ec1851ff3ede9d662ab3f3b1d211e29516c8981ac8c745/radio_group/radio_group/mod.rs",
+      "target": "@components/radio_group/mod.rs"
+    },
+    {
+      "sha256": "sha256:86fd3d59f91b3b5bf443673ab83735dba86d7a3d498d05bc0fffdbf39a81ac54",
+      "source": "artifacts/sha256/86fd3d59f91b3b5bf443673ab83735dba86d7a3d498d05bc0fffdbf39a81ac54/radio_group/radio_group/radio_group.rs",
+      "target": "@components/radio_group/radio_group.rs"
+    },
+    {
+      "sha256": "sha256:1b8cd06b528066e868407958181584462ac24c3c8802dd94c9b5d750d76abe13",
+      "source": "artifacts/sha256/1b8cd06b528066e868407958181584462ac24c3c8802dd94c9b5d750d76abe13/radio_group/radio_group/recipe.rs",
+      "target": "@components/radio_group/recipe.rs"
+    }
+  ],
+  "kind": "component",
+  "license": "MIT OR Apache-2.0",
+  "name": "radio_group",
+  "registry": "@proa",
+  "rustModules": [
+    {
+      "modules": [
+        "radio_group"
+      ],
+      "target": "@components/mod.rs"
+    }
+  ],
+  "schemaVersion": 1,
+  "tier": "free",
+  "version": "sha256:7c125e155fbf658c78d1c0ef412614e0dcec5732e38d3fae528623bb074f2f1c"
+}

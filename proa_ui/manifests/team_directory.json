@@ -1,0 +1,34 @@
+{
+  "$schema": "https://proa.so/schema/ui-component-manifest-v1.json",
+  "cargoDependencies": [],
+  "dependencies": [
+    "@proa/foundation",
+    "avatar",
+    "badge",
+    "button",
+    "card",
+    "input"
+  ],
+  "files": [
+    {
+      "sha256": "sha256:d37eef0850e5f85d49ce91bf8df0cd9b08a58e39e20d46a8ae38a288f75ddc7f",
+      "source": "artifacts/sha256/d37eef0850e5f85d49ce91bf8df0cd9b08a58e39e20d46a8ae38a288f75ddc7f/block-team_directory/team_directory/mod.rs",
+      "target": "@components/team_directory/mod.rs"
+    }
+  ],
+  "kind": "block",
+  "license": "MIT OR Apache-2.0",
+  "name": "team_directory",
+  "registry": "@proa",
+  "rustModules": [
+    {
+      "modules": [
+        "team_directory"
+      ],
+      "target": "@components/mod.rs"
+    }
+  ],
+  "schemaVersion": 1,
+  "tier": "free",
+  "version": "sha256:4326cb9867a5a8ee352f437a0590ae689bb6b39f0d9e747a62ebd8f6aa951470"
+}

@@ -1,0 +1,32 @@
+{
+  "$schema": "https://proa.so/schema/ui-component-manifest-v1.json",
+  "cargoDependencies": [],
+  "dependencies": [
+    "@proa/foundation",
+    "accordion",
+    "badge",
+    "button"
+  ],
+  "files": [
+    {
+      "sha256": "sha256:92d80820ea18eb117617bdad42185ffaad72447ac111ec28a9e50e4b35e72d08",
+      "source": "artifacts/sha256/92d80820ea18eb117617bdad42185ffaad72447ac111ec28a9e50e4b35e72d08/block-faq/faq/mod.rs",
+      "target": "@components/faq/mod.rs"
+    }
+  ],
+  "kind": "block",
+  "license": "MIT OR Apache-2.0",
+  "name": "faq",
+  "registry": "@proa",
+  "rustModules": [
+    {
+      "modules": [
+        "faq"
+      ],
+      "target": "@components/mod.rs"
+    }
+  ],
+  "schemaVersion": 1,
+  "tier": "free",
+  "version": "sha256:77d2e18d085136709842110dc424e12c53d6279d4537832abd39fdfbf4b9edc8"
+}

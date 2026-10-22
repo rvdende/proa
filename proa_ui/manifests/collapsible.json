@@ -1,0 +1,44 @@
+{
+  "$schema": "https://proa.so/schema/ui-component-manifest-v1.json",
+  "cargoDependencies": [],
+  "dependencies": [
+    "@proa/foundation"
+  ],
+  "files": [
+    {
+      "sha256": "sha256:755a716452253a4fcedd0ec0289cd8ed6418e94d7a8627dc27b86c4f5063ab57",
+      "source": "artifacts/sha256/755a716452253a4fcedd0ec0289cd8ed6418e94d7a8627dc27b86c4f5063ab57/collapsible/collapsible/collapsible.rs",
+      "target": "@components/collapsible/collapsible.rs"
+    },
+    {
+      "sha256": "sha256:cd26b2770a1522c518c52b90a09af280733458cd7de8cd70df654514f0650a96",
+      "source": "artifacts/sha256/cd26b2770a1522c518c52b90a09af280733458cd7de8cd70df654514f0650a96/collapsible/collapsible/md.rs",
+      "target": "@components/collapsible/md.rs"
+    },
+    {
+      "sha256": "sha256:f473814a27cd8768e6b307c992814a4821ac9cd98a6f48343c9882de790a744f",
+      "source": "artifacts/sha256/f473814a27cd8768e6b307c992814a4821ac9cd98a6f48343c9882de790a744f/collapsible/collapsible/mod.rs",
+      "target": "@components/collapsible/mod.rs"
+    },
+    {
+      "sha256": "sha256:94395b102529535f556fcc67ff8d499fec315b459da9542e2b22c107f5d71767",
+      "source": "artifacts/sha256/94395b102529535f556fcc67ff8d499fec315b459da9542e2b22c107f5d71767/collapsible/collapsible/recipe.rs",
+      "target": "@components/collapsible/recipe.rs"
+    }
+  ],
+  "kind": "component",
+  "license": "MIT OR Apache-2.0",
+  "name": "collapsible",
+  "registry": "@proa",
+  "rustModules": [
+    {
+      "modules": [
+        "collapsible"
+      ],
+      "target": "@components/mod.rs"
+    }
+  ],
+  "schemaVersion": 1,
+  "tier": "free",
+  "version": "sha256:fac7ff1e4d51fdea17c4bcb577dbce3ad3ab6c0d326f9e41fcce629442a625ee"
+}

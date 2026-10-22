@@ -1,0 +1,44 @@
+{
+  "$schema": "https://proa.so/schema/ui-component-manifest-v1.json",
+  "cargoDependencies": [],
+  "dependencies": [
+    "@proa/foundation"
+  ],
+  "files": [
+    {
+      "sha256": "sha256:e5f6d59a63b229347b5de935d7418b2dff7563ebc22f67eb8bb946dcd4f5bc15",
+      "source": "artifacts/sha256/e5f6d59a63b229347b5de935d7418b2dff7563ebc22f67eb8bb946dcd4f5bc15/progress/progress/md.rs",
+      "target": "@components/progress/md.rs"
+    },
+    {
+      "sha256": "sha256:94005a9fed666f8d60dfe07d26b630e8f592f110c5c39b75ea538090a14c8848",
+      "source": "artifacts/sha256/94005a9fed666f8d60dfe07d26b630e8f592f110c5c39b75ea538090a14c8848/progress/progress/mod.rs",
+      "target": "@components/progress/mod.rs"
+    },
+    {
+      "sha256": "sha256:e203165fdff15e537fc5af25c53295734ea119ffabd85bfdc4463d3dfbd19b4e",
+      "source": "artifacts/sha256/e203165fdff15e537fc5af25c53295734ea119ffabd85bfdc4463d3dfbd19b4e/progress/progress/progress.rs",
+      "target": "@components/progress/progress.rs"
+    },
+    {
+      "sha256": "sha256:57b860921a770c227fede3459d11b233a181fae7e4781885264a93121d5d68c3",
+      "source": "artifacts/sha256/57b860921a770c227fede3459d11b233a181fae7e4781885264a93121d5d68c3/progress/progress/recipe.rs",
+      "target": "@components/progress/recipe.rs"
+    }
+  ],
+  "kind": "component",
+  "license": "MIT OR Apache-2.0",
+  "name": "progress",
+  "registry": "@proa",
+  "rustModules": [
+    {
+      "modules": [
+        "progress"
+      ],
+      "target": "@components/mod.rs"
+    }
+  ],
+  "schemaVersion": 1,
+  "tier": "free",
+  "version": "sha256:cca245866eaef3fe607b62da78bc3d30f4134328a73de556ed34e064e4aed04f"
+}

@@ -1,0 +1,35 @@
+{
+  "$schema": "https://proa.so/schema/ui-component-manifest-v1.json",
+  "cargoDependencies": [],
+  "dependencies": [
+    "@proa/foundation",
+    "avatar",
+    "badge",
+    "button",
+    "card",
+    "input",
+    "label"
+  ],
+  "files": [
+    {
+      "sha256": "sha256:54d5d4c23748ae389cf668f221ad280ac7e5b962383a30459c36bd23dbea604c",
+      "source": "artifacts/sha256/54d5d4c23748ae389cf668f221ad280ac7e5b962383a30459c36bd23dbea604c/block-newsletter_cta/newsletter_cta/mod.rs",
+      "target": "@components/newsletter_cta/mod.rs"
+    }
+  ],
+  "kind": "block",
+  "license": "MIT OR Apache-2.0",
+  "name": "newsletter_cta",
+  "registry": "@proa",
+  "rustModules": [
+    {
+      "modules": [
+        "newsletter_cta"
+      ],
+      "target": "@components/mod.rs"
+    }
+  ],
+  "schemaVersion": 1,
+  "tier": "free",
+  "version": "sha256:41d523f7fe80de35c623509bebe98dc586973b68cae0b25bb64f5e0550200b38"
+}

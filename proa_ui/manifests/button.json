@@ -1,0 +1,45 @@
+{
+  "$schema": "https://proa.so/schema/ui-component-manifest-v1.json",
+  "cargoDependencies": [],
+  "dependencies": [
+    "@proa/foundation",
+    "spinner"
+  ],
+  "files": [
+    {
+      "sha256": "sha256:3b2a1a538aa58624d386e944a5ec295bcc22af1f4ca4de5000cc6a065d73cd48",
+      "source": "artifacts/sha256/3b2a1a538aa58624d386e944a5ec295bcc22af1f4ca4de5000cc6a065d73cd48/button/button/button.rs",
+      "target": "@components/button/button.rs"
+    },
+    {
+      "sha256": "sha256:8eca9ff0bbc349771ffeeddf5f11874ea163245b2c883aeee6f4034e7e5aa6e1",
+      "source": "artifacts/sha256/8eca9ff0bbc349771ffeeddf5f11874ea163245b2c883aeee6f4034e7e5aa6e1/button/button/md.rs",
+      "target": "@components/button/md.rs"
+    },
+    {
+      "sha256": "sha256:9e3c4052ec0986b77f4b61951bcb0bb025f7bece1efa7a992e771e31b0a4c365",
+      "source": "artifacts/sha256/9e3c4052ec0986b77f4b61951bcb0bb025f7bece1efa7a992e771e31b0a4c365/button/button/mod.rs",
+      "target": "@components/button/mod.rs"
+    },
+    {
+      "sha256": "sha256:bf7f917e7dae0fb0ae56257a52ece1337953318d51f79b4c7f5d2797f8e7795d",
+      "source": "artifacts/sha256/bf7f917e7dae0fb0ae56257a52ece1337953318d51f79b4c7f5d2797f8e7795d/button/button/recipe.rs",
+      "target": "@components/button/recipe.rs"
+    }
+  ],
+  "kind": "component",
+  "license": "MIT OR Apache-2.0",
+  "name": "button",
+  "registry": "@proa",
+  "rustModules": [
+    {
+      "modules": [
+        "button"
+      ],
+      "target": "@components/mod.rs"
+    }
+  ],
+  "schemaVersion": 1,
+  "tier": "free",
+  "version": "sha256:fde24cae18caca9e6bb41843042b12044dc990c37fd1cbf374f229bebbbb4c8c"
+}

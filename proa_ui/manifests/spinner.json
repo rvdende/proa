@@ -1,0 +1,44 @@
+{
+  "$schema": "https://proa.so/schema/ui-component-manifest-v1.json",
+  "cargoDependencies": [],
+  "dependencies": [
+    "@proa/foundation"
+  ],
+  "files": [
+    {
+      "sha256": "sha256:0d5404cbffec2d1cf6ae8ecf51e09c689c0f1f5cf63c8adf7469295c99462015",
+      "source": "artifacts/sha256/0d5404cbffec2d1cf6ae8ecf51e09c689c0f1f5cf63c8adf7469295c99462015/spinner/spinner/md.rs",
+      "target": "@components/spinner/md.rs"
+    },
+    {
+      "sha256": "sha256:26a05e68ef50e178920425208e465341d22d31c63bbdaea063c4d6f2ebe27658",
+      "source": "artifacts/sha256/26a05e68ef50e178920425208e465341d22d31c63bbdaea063c4d6f2ebe27658/spinner/spinner/mod.rs",
+      "target": "@components/spinner/mod.rs"
+    },
+    {
+      "sha256": "sha256:ce66bb08f4eb73f46927844122c2060b7758bcd9e03b89d3a93725c2b9d29279",
+      "source": "artifacts/sha256/ce66bb08f4eb73f46927844122c2060b7758bcd9e03b89d3a93725c2b9d29279/spinner/spinner/recipe.rs",
+      "target": "@components/spinner/recipe.rs"
+    },
+    {
+      "sha256": "sha256:4e5eb1b539d3bbd51c962f8765e960a7967fe01ce1c673a0528105ba415b1201",
+      "source": "artifacts/sha256/4e5eb1b539d3bbd51c962f8765e960a7967fe01ce1c673a0528105ba415b1201/spinner/spinner/spinner.rs",
+      "target": "@components/spinner/spinner.rs"
+    }
+  ],
+  "kind": "component",
+  "license": "MIT OR Apache-2.0",
+  "name": "spinner",
+  "registry": "@proa",
+  "rustModules": [
+    {
+      "modules": [
+        "spinner"
+      ],
+      "target": "@components/mod.rs"
+    }
+  ],
+  "schemaVersion": 1,
+  "tier": "free",
+  "version": "sha256:e1d2c6ed50a6668892ddbc8d9d85d0a596671e429202b3376d5a51347ba1b315"
+}

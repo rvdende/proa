@@ -1,0 +1,45 @@
+{
+  "$schema": "https://proa.so/schema/ui-component-manifest-v1.json",
+  "cargoDependencies": [],
+  "dependencies": [
+    "@proa/foundation",
+    "dialog"
+  ],
+  "files": [
+    {
+      "sha256": "sha256:64cee19b43bc298524daa5f05eb95ce05d21e95a190b4d407f6ee5f704597bc3",
+      "source": "artifacts/sha256/64cee19b43bc298524daa5f05eb95ce05d21e95a190b4d407f6ee5f704597bc3/alert_dialog/alert_dialog/alert_dialog.rs",
+      "target": "@components/alert_dialog/alert_dialog.rs"
+    },
+    {
+      "sha256": "sha256:ee439cd6b5ee3b57e500d086d046e03b013c77937b2d90bcbac55afef419241d",
+      "source": "artifacts/sha256/ee439cd6b5ee3b57e500d086d046e03b013c77937b2d90bcbac55afef419241d/alert_dialog/alert_dialog/md.rs",
+      "target": "@components/alert_dialog/md.rs"
+    },
+    {
+      "sha256": "sha256:8f825a6f86015a689d12b237a71d72c7799d3a4a3b8c4abdc0e0e5a04601feea",
+      "source": "artifacts/sha256/8f825a6f86015a689d12b237a71d72c7799d3a4a3b8c4abdc0e0e5a04601feea/alert_dialog/alert_dialog/mod.rs",
+      "target": "@components/alert_dialog/mod.rs"
+    },
+    {
+      "sha256": "sha256:bd0b7e26f9f6470fb519d24f007eea30f07f67e1c509c867297e6e0debbfdbb6",
+      "source": "artifacts/sha256/bd0b7e26f9f6470fb519d24f007eea30f07f67e1c509c867297e6e0debbfdbb6/alert_dialog/alert_dialog/recipe.rs",
+      "target": "@components/alert_dialog/recipe.rs"
+    }
+  ],
+  "kind": "component",
+  "license": "MIT OR Apache-2.0",
+  "name": "alert_dialog",
+  "registry": "@proa",
+  "rustModules": [
+    {
+      "modules": [
+        "alert_dialog"
+      ],
+      "target": "@components/mod.rs"
+    }
+  ],
+  "schemaVersion": 1,
+  "tier": "free",
+  "version": "sha256:b730f2c5eb526a5d02d9cb8e5a7038d91752368d6bf5f72f3aff6a7fe21928b5"
+}

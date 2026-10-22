@@ -1,0 +1,49 @@
+{
+  "$schema": "https://proa.so/schema/ui-component-manifest-v1.json",
+  "cargoDependencies": [],
+  "dependencies": [
+    "@proa/foundation"
+  ],
+  "files": [
+    {
+      "sha256": "sha256:61c237ed8dd2984ba9a9634ebaec3a3bab91ab751825775c259dd10bff1d0ea7",
+      "source": "artifacts/sha256/61c237ed8dd2984ba9a9634ebaec3a3bab91ab751825775c259dd10bff1d0ea7/accordion/accordion/accordion.rs",
+      "target": "@components/accordion/accordion.rs"
+    },
+    {
+      "sha256": "sha256:ef78f2fb74da609462b5827639a518174089ef34b5231d11cfc7b28d6d96d2f6",
+      "source": "artifacts/sha256/ef78f2fb74da609462b5827639a518174089ef34b5231d11cfc7b28d6d96d2f6/accordion/accordion/css_only.rs",
+      "target": "@components/accordion/css_only.rs"
+    },
+    {
+      "sha256": "sha256:11bc14062ac98ad3287ecfb9eaaae017c0d90d7dbb765cfd523094dda9ae2175",
+      "source": "artifacts/sha256/11bc14062ac98ad3287ecfb9eaaae017c0d90d7dbb765cfd523094dda9ae2175/accordion/accordion/md.rs",
+      "target": "@components/accordion/md.rs"
+    },
+    {
+      "sha256": "sha256:570ad5172f3b688d02d55770de5c62696d3fdd16f93631ba118751bc40a6c81e",
+      "source": "artifacts/sha256/570ad5172f3b688d02d55770de5c62696d3fdd16f93631ba118751bc40a6c81e/accordion/accordion/mod.rs",
+      "target": "@components/accordion/mod.rs"
+    },
+    {
+      "sha256": "sha256:b849701ea7311faeb41817f93f7d8b1a1e89e17ee00507c7a7937effac9b230d",
+      "source": "artifacts/sha256/b849701ea7311faeb41817f93f7d8b1a1e89e17ee00507c7a7937effac9b230d/accordion/accordion/recipe.rs",
+      "target": "@components/accordion/recipe.rs"
+    }
+  ],
+  "kind": "component",
+  "license": "MIT OR Apache-2.0",
+  "name": "accordion",
+  "registry": "@proa",
+  "rustModules": [
+    {
+      "modules": [
+        "accordion"
+      ],
+      "target": "@components/mod.rs"
+    }
+  ],
+  "schemaVersion": 1,
+  "tier": "free",
+  "version": "sha256:fe9247fd8b7562fc59508ac530d19c543d1552319fd86334f00c64bc2584590a"
+}

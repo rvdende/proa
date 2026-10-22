@@ -1,0 +1,34 @@
+{
+  "$schema": "https://proa.so/schema/ui-component-manifest-v1.json",
+  "cargoDependencies": [],
+  "dependencies": [
+    "@proa/foundation"
+  ],
+  "files": [
+    {
+      "sha256": "sha256:84408e75e3eb40de76675ba331ddc7619b66ada67878cf2eb76233d64b3495cc",
+      "source": "artifacts/sha256/84408e75e3eb40de76675ba331ddc7619b66ada67878cf2eb76233d64b3495cc/label/label/md.rs",
+      "target": "@components/label/md.rs"
+    },
+    {
+      "sha256": "sha256:b5df28b9b90d64fc9987990184df21e78855f6252af0d2828bbf148fb3f41a75",
+      "source": "artifacts/sha256/b5df28b9b90d64fc9987990184df21e78855f6252af0d2828bbf148fb3f41a75/label/label/mod.rs",
+      "target": "@components/label/mod.rs"
+    }
+  ],
+  "kind": "component",
+  "license": "MIT OR Apache-2.0",
+  "name": "label",
+  "registry": "@proa",
+  "rustModules": [
+    {
+      "modules": [
+        "label"
+      ],
+      "target": "@components/mod.rs"
+    }
+  ],
+  "schemaVersion": 1,
+  "tier": "free",
+  "version": "sha256:878d87fbfce5a6ff646c771a80120058e8ec8aefd579dad364747c9c0ae715ce"
+}

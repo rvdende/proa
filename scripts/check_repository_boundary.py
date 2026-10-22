@@ -75,6 +75,9 @@ TERM_EXCEPTIONS = {
 INCLUDE_EXCEPTIONS = {
     Path("proa_cli/src/site_scaffold/templates/mod.rs"),
 }
+# Verbatim registry mirror (scripts/sync_proa_ui.py). Its Markdown links point
+# into the upstream proa_ui repository layout, not this checkout.
+LINK_EXCEPTION_ROOTS = (Path("proa_ui"),)
 
 
 def is_inside_repo(path: Path) -> bool:
@@ -355,7 +358,9 @@ def main() -> int:
                     problems.append(
                         f"{relative}:{line}: include path {include_path!r} is missing"
                     )
-        if path.suffix in {".md", ".mdx"}:
+        if path.suffix in {".md", ".mdx"} and not any(
+            relative.is_relative_to(root) for root in LINK_EXCEPTION_ROOTS
+        ):
             problems.extend(check_markdown_links(path, text, repository_paths))
         for label, pattern in FORBIDDEN_TEXT:
             match = pattern.search(text)

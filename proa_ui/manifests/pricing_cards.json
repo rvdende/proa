@@ -1,0 +1,32 @@
+{
+  "$schema": "https://proa.so/schema/ui-component-manifest-v1.json",
+  "cargoDependencies": [],
+  "dependencies": [
+    "@proa/foundation",
+    "badge",
+    "button",
+    "card"
+  ],
+  "files": [
+    {
+      "sha256": "sha256:b872858099a049bf694af5e07ac9807f4c6a7e7d46b03fa1ebb89c8d79964fd9",
+      "source": "artifacts/sha256/b872858099a049bf694af5e07ac9807f4c6a7e7d46b03fa1ebb89c8d79964fd9/block-pricing_cards/pricing_cards/mod.rs",
+      "target": "@components/pricing_cards/mod.rs"
+    }
+  ],
+  "kind": "block",
+  "license": "MIT OR Apache-2.0",
+  "name": "pricing_cards",
+  "registry": "@proa",
+  "rustModules": [
+    {
+      "modules": [
+        "pricing_cards"
+      ],
+      "target": "@components/mod.rs"
+    }
+  ],
+  "schemaVersion": 1,
+  "tier": "free",
+  "version": "sha256:78bed0a4deca3a5073dbf1cca1d2376a33463c2b86f3a3fce5ae6b948266bece"
+}

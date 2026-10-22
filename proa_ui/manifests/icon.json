@@ -1,0 +1,39 @@
+{
+  "$schema": "https://proa.so/schema/ui-component-manifest-v1.json",
+  "cargoDependencies": [],
+  "dependencies": [
+    "@proa/foundation"
+  ],
+  "files": [
+    {
+      "sha256": "sha256:03837eb8055443b1151b5de4463bb51c66b8618e959e16c0246a21705e34d0b8",
+      "source": "artifacts/sha256/03837eb8055443b1151b5de4463bb51c66b8618e959e16c0246a21705e34d0b8/icon/icon/icon.rs",
+      "target": "@components/icon/icon.rs"
+    },
+    {
+      "sha256": "sha256:f42e6e759a868a4b19472c76f15672f1fcfe7a06d2eff76f08f1a0a2f616d37d",
+      "source": "artifacts/sha256/f42e6e759a868a4b19472c76f15672f1fcfe7a06d2eff76f08f1a0a2f616d37d/icon/icon/md.rs",
+      "target": "@components/icon/md.rs"
+    },
+    {
+      "sha256": "sha256:faba7752504d28a108a09e783e1ec7f92501973449a221c18727eaf42431a2af",
+      "source": "artifacts/sha256/faba7752504d28a108a09e783e1ec7f92501973449a221c18727eaf42431a2af/icon/icon/mod.rs",
+      "target": "@components/icon/mod.rs"
+    }
+  ],
+  "kind": "component",
+  "license": "MIT OR Apache-2.0",
+  "name": "icon",
+  "registry": "@proa",
+  "rustModules": [
+    {
+      "modules": [
+        "icon"
+      ],
+      "target": "@components/mod.rs"
+    }
+  ],
+  "schemaVersion": 1,
+  "tier": "free",
+  "version": "sha256:0d1ea4a319ffcd83de83311e116eec431d7d6f7bc42506b3111cf99dc3515ad7"
+}

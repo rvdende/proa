@@ -1,0 +1,32 @@
+{
+  "$schema": "https://proa.so/schema/ui-component-manifest-v1.json",
+  "cargoDependencies": [],
+  "dependencies": [
+    "@proa/foundation",
+    "avatar",
+    "badge",
+    "card"
+  ],
+  "files": [
+    {
+      "sha256": "sha256:ccb01ce12a5aecaec0bb4aefcf4b7bdc29efec3ffc68c9b3efcc309f530ec909",
+      "source": "artifacts/sha256/ccb01ce12a5aecaec0bb4aefcf4b7bdc29efec3ffc68c9b3efcc309f530ec909/block-testimonials_wall/testimonials_wall/mod.rs",
+      "target": "@components/testimonials_wall/mod.rs"
+    }
+  ],
+  "kind": "block",
+  "license": "MIT OR Apache-2.0",
+  "name": "testimonials_wall",
+  "registry": "@proa",
+  "rustModules": [
+    {
+      "modules": [
+        "testimonials_wall"
+      ],
+      "target": "@components/mod.rs"
+    }
+  ],
+  "schemaVersion": 1,
+  "tier": "free",
+  "version": "sha256:70c6807e04f8d396f076f18baaf9b7de5309ecfa542eb2f6d850d07bc1915cc8"
+}

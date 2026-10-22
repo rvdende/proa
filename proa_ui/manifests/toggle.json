@@ -1,0 +1,44 @@
+{
+  "$schema": "https://proa.so/schema/ui-component-manifest-v1.json",
+  "cargoDependencies": [],
+  "dependencies": [
+    "@proa/foundation"
+  ],
+  "files": [
+    {
+      "sha256": "sha256:55e44c0703f1902ebceda25bec58c26b52632c4a7e8dbaaddb890173d44839cb",
+      "source": "artifacts/sha256/55e44c0703f1902ebceda25bec58c26b52632c4a7e8dbaaddb890173d44839cb/toggle/toggle/md.rs",
+      "target": "@components/toggle/md.rs"
+    },
+    {
+      "sha256": "sha256:c2601aa5da8c486cec55289445ebd7f83ddb432039f9dab3246cf4aa4bd6cc05",
+      "source": "artifacts/sha256/c2601aa5da8c486cec55289445ebd7f83ddb432039f9dab3246cf4aa4bd6cc05/toggle/toggle/mod.rs",
+      "target": "@components/toggle/mod.rs"
+    },
+    {
+      "sha256": "sha256:8083af5adc1e40c40954824f6d185108aa80d74f05991dd5579284c1687d1db8",
+      "source": "artifacts/sha256/8083af5adc1e40c40954824f6d185108aa80d74f05991dd5579284c1687d1db8/toggle/toggle/recipe.rs",
+      "target": "@components/toggle/recipe.rs"
+    },
+    {
+      "sha256": "sha256:f330f5799cb2b38857733283fa68cf54010efd742606c0a02a82db08c2914fea",
+      "source": "artifacts/sha256/f330f5799cb2b38857733283fa68cf54010efd742606c0a02a82db08c2914fea/toggle/toggle/toggle.rs",
+      "target": "@components/toggle/toggle.rs"
+    }
+  ],
+  "kind": "component",
+  "license": "MIT OR Apache-2.0",
+  "name": "toggle",
+  "registry": "@proa",
+  "rustModules": [
+    {
+      "modules": [
+        "toggle"
+      ],
+      "target": "@components/mod.rs"
+    }
+  ],
+  "schemaVersion": 1,
+  "tier": "free",
+  "version": "sha256:c2ef174214e0f7bac1486c135e5739bae7d116c6c01c58a0d91c963996ded30f"
+}

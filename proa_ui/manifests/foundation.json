@@ -1,0 +1,189 @@
+{
+  "$schema": "https://proa.so/schema/ui-component-manifest-v1.json",
+  "cargoDependencies": [
+    {
+      "name": "const_format",
+      "version": "0.2"
+    },
+    {
+      "name": "heapless",
+      "version": "0.8"
+    },
+    {
+      "git": "https://github.com/Proa-Labs/proa.git",
+      "name": "proa_actions"
+    },
+    {
+      "git": "https://github.com/Proa-Labs/proa.git",
+      "name": "proa_core"
+    },
+    {
+      "git": "https://github.com/Proa-Labs/proa.git",
+      "name": "proa_ir"
+    },
+    {
+      "git": "https://github.com/Proa-Labs/proa.git",
+      "name": "proa_macros"
+    },
+    {
+      "features": [
+        "derive"
+      ],
+      "name": "serde",
+      "version": "1.0"
+    },
+    {
+      "name": "serde_json",
+      "version": "1.0"
+    },
+    {
+      "features": [
+        "derive"
+      ],
+      "name": "strum",
+      "version": "0.27.2"
+    },
+    {
+      "name": "strum_macros",
+      "version": "0.27.2"
+    }
+  ],
+  "dependencies": [],
+  "files": [
+    {
+      "sha256": "sha256:32a367c64762c528d7ee3b1fdd5441f0e82007aaf8e354f7df7297f88bbe3c28",
+      "source": "artifacts/sha256/32a367c64762c528d7ee3b1fdd5441f0e82007aaf8e354f7df7297f88bbe3c28/common-assets/proa-ui/proa-free.css",
+      "target": "@assets/proa-ui/proa-free.css"
+    },
+    {
+      "sha256": "sha256:e7cfda0f20e6b8a62695c2fc950d40b5ee71efae07cc7e98a857d5da22c05015",
+      "source": "artifacts/sha256/e7cfda0f20e6b8a62695c2fc950d40b5ee71efae07cc7e98a857d5da22c05015/common-assets/proa-ui/proa-free.js",
+      "target": "@assets/proa-ui/proa-free.js"
+    },
+    {
+      "sha256": "sha256:6670c971311448c2ec475df3276116f2e5cfc26bbd32ad7a71bafff808fd6d7b",
+      "source": "artifacts/sha256/6670c971311448c2ec475df3276116f2e5cfc26bbd32ad7a71bafff808fd6d7b/common/_proa/LICENSE",
+      "target": "@components/_proa/LICENSE"
+    },
+    {
+      "sha256": "sha256:c71d239df91726fc519c6eb72d318ec65820627232b2f796219e87dcf35d0ab4",
+      "source": "artifacts/sha256/c71d239df91726fc519c6eb72d318ec65820627232b2f796219e87dcf35d0ab4/common/_proa/LICENSE-APACHE",
+      "target": "@components/_proa/LICENSE-APACHE"
+    },
+    {
+      "sha256": "sha256:11a6f31a6fc4700b78449859b41b79a087a9653bac01d8491b8d829f36a3141f",
+      "source": "artifacts/sha256/11a6f31a6fc4700b78449859b41b79a087a9653bac01d8491b8d829f36a3141f/common/_proa/LICENSE-MIT",
+      "target": "@components/_proa/LICENSE-MIT"
+    },
+    {
+      "sha256": "sha256:30ca2333884c881cbc9c9d32847fa0ed8a4b1ef041d6219e50fff56274388ed2",
+      "source": "artifacts/sha256/30ca2333884c881cbc9c9d32847fa0ed8a4b1ef041d6219e50fff56274388ed2/common/_proa/LICENSING.md",
+      "target": "@components/_proa/LICENSING.md"
+    },
+    {
+      "sha256": "sha256:b79af1ce9e17c2e1587aab5d33e55c6441799d06af99682dc86def83b139b1b1",
+      "source": "artifacts/sha256/b79af1ce9e17c2e1587aab5d33e55c6441799d06af99682dc86def83b139b1b1/common/_proa/THIRD_PARTY_NOTICES.md",
+      "target": "@components/_proa/THIRD_PARTY_NOTICES.md"
+    },
+    {
+      "sha256": "sha256:3f79f39ce2aa3b3595c0699594d49ed401bd041106a6911724d8a842381b2c55",
+      "source": "artifacts/sha256/3f79f39ce2aa3b3595c0699594d49ed401bd041106a6911724d8a842381b2c55/common/_proa/anatomy.rs",
+      "target": "@components/_proa/anatomy.rs"
+    },
+    {
+      "sha256": "sha256:0ed41ddc72742075ab6641551fb4dbfa51c801449451576df266311362053e68",
+      "source": "artifacts/sha256/0ed41ddc72742075ab6641551fb4dbfa51c801449451576df266311362053e68/common/_proa/collection.rs",
+      "target": "@components/_proa/collection.rs"
+    },
+    {
+      "sha256": "sha256:71dfa5f8fd535d1ceb864f6073738f81a130453bf959f77df3b8cbd829932ca1",
+      "source": "artifacts/sha256/71dfa5f8fd535d1ceb864f6073738f81a130453bf959f77df3b8cbd829932ca1/common/_proa/component_macros.rs",
+      "target": "@components/_proa/component_macros.rs"
+    },
+    {
+      "sha256": "sha256:6948579acc78c520178880f5ac2ce236675d49b5a5e2d01e864e38ad98f02ec6",
+      "source": "artifacts/sha256/6948579acc78c520178880f5ac2ce236675d49b5a5e2d01e864e38ad98f02ec6/common/_proa/component_tree.rs",
+      "target": "@components/_proa/component_tree.rs"
+    },
+    {
+      "sha256": "sha256:6c05ccbf3f1397902b092183eec61ae4002a382c253aed6294458f5e2d6f8417",
+      "source": "artifacts/sha256/6c05ccbf3f1397902b092183eec61ae4002a382c253aed6294458f5e2d6f8417/common/_proa/form.rs",
+      "target": "@components/_proa/form.rs"
+    },
+    {
+      "sha256": "sha256:3b6c37821efe94046c5b6b78aea641bd4fd4ced9aebb95c919a97eebe78cd971",
+      "source": "artifacts/sha256/3b6c37821efe94046c5b6b78aea641bd4fd4ced9aebb95c919a97eebe78cd971/common/_proa/free_web.rs",
+      "target": "@components/_proa/free_web.rs"
+    },
+    {
+      "sha256": "sha256:3d3d13345950ffcd24096d1ee0a40bcf556c4e31f7b0f53c684938e6fb5b161f",
+      "source": "artifacts/sha256/3d3d13345950ffcd24096d1ee0a40bcf556c4e31f7b0f53c684938e6fb5b161f/common/_proa/licensing/free-source-allowlist.toml",
+      "target": "@components/_proa/licensing/free-source-allowlist.toml"
+    },
+    {
+      "sha256": "sha256:aa1008e15f67a7c6bb92ad0de505feb7519c99baf86c50fd0dd1ac4cd94279e7",
+      "source": "artifacts/sha256/aa1008e15f67a7c6bb92ad0de505feb7519c99baf86c50fd0dd1ac4cd94279e7/common/_proa/md_support.rs",
+      "target": "@components/_proa/md_support.rs"
+    },
+    {
+      "sha256": "sha256:0c02b01d12297aa8dabeebfb327e35648edc5bcb03912757ff96aad40a8843e9",
+      "source": "artifacts/sha256/0c02b01d12297aa8dabeebfb327e35648edc5bcb03912757ff96aad40a8843e9/common/_proa/mod.rs",
+      "target": "@components/_proa/mod.rs"
+    },
+    {
+      "sha256": "sha256:e3b6675a627ff668972ca36e37a8bbad336e0c5578d5d11dc3efce8879c7995e",
+      "source": "artifacts/sha256/e3b6675a627ff668972ca36e37a8bbad336e0c5578d5d11dc3efce8879c7995e/common/_proa/overlay.rs",
+      "target": "@components/_proa/overlay.rs"
+    },
+    {
+      "sha256": "sha256:f3041320a7a89c2dba2761b2ecbffaaac96db003a31bccc2b3d61578a5059108",
+      "source": "artifacts/sha256/f3041320a7a89c2dba2761b2ecbffaaac96db003a31bccc2b3d61578a5059108/common/_proa/recipe.rs",
+      "target": "@components/_proa/recipe.rs"
+    },
+    {
+      "sha256": "sha256:b1507583c7c7b18854690b355af8cb94864867711036902ca2214463e3f9e970",
+      "source": "artifacts/sha256/b1507583c7c7b18854690b355af8cb94864867711036902ca2214463e3f9e970/common/_proa/slots.rs",
+      "target": "@components/_proa/slots.rs"
+    },
+    {
+      "sha256": "sha256:ca77d17e9c8754f81c98e99a0be9206bd109fb194c31dbaba38cb0a2d44bd9ed",
+      "source": "artifacts/sha256/ca77d17e9c8754f81c98e99a0be9206bd109fb194c31dbaba38cb0a2d44bd9ed/common/_proa/state.rs",
+      "target": "@components/_proa/state.rs"
+    },
+    {
+      "sha256": "sha256:5f5510cf134a7ce37cd904649b1bca293aee5c61267989b139e565d963e238a5",
+      "source": "artifacts/sha256/5f5510cf134a7ce37cd904649b1bca293aee5c61267989b139e565d963e238a5/common/_proa/theme.rs",
+      "target": "@components/_proa/theme.rs"
+    },
+    {
+      "sha256": "sha256:f870fde2e60f632d453a9203ea46e9b60d6c06873126ea7572b3526151b60290",
+      "source": "artifacts/sha256/f870fde2e60f632d453a9203ea46e9b60d6c06873126ea7572b3526151b60290/common/_proa/tokens.rs",
+      "target": "@components/_proa/tokens.rs"
+    },
+    {
+      "sha256": "sha256:ba064542d5f3801c15240dbdb7a87078eea068331489b6af9a57f462337d8e01",
+      "source": "artifacts/sha256/ba064542d5f3801c15240dbdb7a87078eea068331489b6af9a57f462337d8e01/common/_proa/traits.rs",
+      "target": "@components/_proa/traits.rs"
+    },
+    {
+      "sha256": "sha256:fc2311e66a0e298de0c34d229dc325b9b0ca8be68e0e79a2e6780369e78175b6",
+      "source": "artifacts/sha256/fc2311e66a0e298de0c34d229dc325b9b0ca8be68e0e79a2e6780369e78175b6/common/_proa/variant_spec.rs",
+      "target": "@components/_proa/variant_spec.rs"
+    }
+  ],
+  "kind": "component",
+  "license": "MIT OR Apache-2.0",
+  "name": "foundation",
+  "registry": "@proa",
+  "rustModules": [
+    {
+      "modules": [
+        "_proa"
+      ],
+      "target": "@components/mod.rs"
+    }
+  ],
+  "schemaVersion": 1,
+  "tier": "free",
+  "version": "sha256:93a3bd45a53baaba89a3b680281b87f217871f2f2bc760ada051f3a9ad398727"
+}

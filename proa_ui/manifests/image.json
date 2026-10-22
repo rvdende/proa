@@ -1,0 +1,44 @@
+{
+  "$schema": "https://proa.so/schema/ui-component-manifest-v1.json",
+  "cargoDependencies": [],
+  "dependencies": [
+    "@proa/foundation"
+  ],
+  "files": [
+    {
+      "sha256": "sha256:85b66d386183590721290feedada67d91a69f8506d19f2e2c855ebe019f7c9b5",
+      "source": "artifacts/sha256/85b66d386183590721290feedada67d91a69f8506d19f2e2c855ebe019f7c9b5/image/image/image.rs",
+      "target": "@components/image/image.rs"
+    },
+    {
+      "sha256": "sha256:38fad1c6301336f7fd35310eec05c8aa060a3d50898a55a1a5c8c82932a840b1",
+      "source": "artifacts/sha256/38fad1c6301336f7fd35310eec05c8aa060a3d50898a55a1a5c8c82932a840b1/image/image/md.rs",
+      "target": "@components/image/md.rs"
+    },
+    {
+      "sha256": "sha256:41af89ff6140dea83f47392ff83e7abd58a415bc640a5539df5c22fe595b560d",
+      "source": "artifacts/sha256/41af89ff6140dea83f47392ff83e7abd58a415bc640a5539df5c22fe595b560d/image/image/mod.rs",
+      "target": "@components/image/mod.rs"
+    },
+    {
+      "sha256": "sha256:34caa2309dbc02ddd93b51cd38f5a9d24656a07b15904ee11274c15b1de1c4c4",
+      "source": "artifacts/sha256/34caa2309dbc02ddd93b51cd38f5a9d24656a07b15904ee11274c15b1de1c4c4/image/image/recipe.rs",
+      "target": "@components/image/recipe.rs"
+    }
+  ],
+  "kind": "component",
+  "license": "MIT OR Apache-2.0",
+  "name": "image",
+  "registry": "@proa",
+  "rustModules": [
+    {
+      "modules": [
+        "image"
+      ],
+      "target": "@components/mod.rs"
+    }
+  ],
+  "schemaVersion": 1,
+  "tier": "free",
+  "version": "sha256:c040073f6d4a2442d3fdd49cc5326b451d2644248088ccffedf7b237d1af5f66"
+}

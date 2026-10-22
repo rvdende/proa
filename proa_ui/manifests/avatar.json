@@ -1,0 +1,44 @@
+{
+  "$schema": "https://proa.so/schema/ui-component-manifest-v1.json",
+  "cargoDependencies": [],
+  "dependencies": [
+    "@proa/foundation"
+  ],
+  "files": [
+    {
+      "sha256": "sha256:64a1d50ace7ba969ae0dfbcdd16daaf0c588dd2bb8560d02fbd829630e793b27",
+      "source": "artifacts/sha256/64a1d50ace7ba969ae0dfbcdd16daaf0c588dd2bb8560d02fbd829630e793b27/avatar/avatar/avatar.rs",
+      "target": "@components/avatar/avatar.rs"
+    },
+    {
+      "sha256": "sha256:961c0eb39808b25263b4904c329ac540627d1bf132185252da7d49664f5e2da5",
+      "source": "artifacts/sha256/961c0eb39808b25263b4904c329ac540627d1bf132185252da7d49664f5e2da5/avatar/avatar/md.rs",
+      "target": "@components/avatar/md.rs"
+    },
+    {
+      "sha256": "sha256:57ced7fb1e21ca428b63fd6f27ae172df90ba834b5b53223388b14c76e0601c2",
+      "source": "artifacts/sha256/57ced7fb1e21ca428b63fd6f27ae172df90ba834b5b53223388b14c76e0601c2/avatar/avatar/mod.rs",
+      "target": "@components/avatar/mod.rs"
+    },
+    {
+      "sha256": "sha256:e43036fee446e386ac57c379220408a0e4adf522335e698e7b9acd4380b7dd62",
+      "source": "artifacts/sha256/e43036fee446e386ac57c379220408a0e4adf522335e698e7b9acd4380b7dd62/avatar/avatar/recipe.rs",
+      "target": "@components/avatar/recipe.rs"
+    }
+  ],
+  "kind": "component",
+  "license": "MIT OR Apache-2.0",
+  "name": "avatar",
+  "registry": "@proa",
+  "rustModules": [
+    {
+      "modules": [
+        "avatar"
+      ],
+      "target": "@components/mod.rs"
+    }
+  ],
+  "schemaVersion": 1,
+  "tier": "free",
+  "version": "sha256:b5cfdd12f0fe077e794e64ce45dd58706bf2f8df7e82b853c168f9cdcabc68b9"
+}

@@ -1,0 +1,32 @@
+{
+  "$schema": "https://proa.so/schema/ui-component-manifest-v1.json",
+  "cargoDependencies": [],
+  "dependencies": [
+    "@proa/foundation",
+    "badge",
+    "button",
+    "card"
+  ],
+  "files": [
+    {
+      "sha256": "sha256:48a87dedf9b09261595d0a5a36aeb924b6c38311bc3a2045d6631f0314fc1b25",
+      "source": "artifacts/sha256/48a87dedf9b09261595d0a5a36aeb924b6c38311bc3a2045d6631f0314fc1b25/block-hero_saas/hero_saas/mod.rs",
+      "target": "@components/hero_saas/mod.rs"
+    }
+  ],
+  "kind": "block",
+  "license": "MIT OR Apache-2.0",
+  "name": "hero_saas",
+  "registry": "@proa",
+  "rustModules": [
+    {
+      "modules": [
+        "hero_saas"
+      ],
+      "target": "@components/mod.rs"
+    }
+  ],
+  "schemaVersion": 1,
+  "tier": "free",
+  "version": "sha256:ff248248d1ba91ccd8d37f6f14948619e3a97b46bb157f07375c8c2bc581ef70"
+}

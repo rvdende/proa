@@ -1,0 +1,35 @@
+{
+  "$schema": "https://proa.so/schema/ui-component-manifest-v1.json",
+  "cargoDependencies": [],
+  "dependencies": [
+    "@proa/foundation",
+    "badge",
+    "button",
+    "card",
+    "input",
+    "progress",
+    "table"
+  ],
+  "files": [
+    {
+      "sha256": "sha256:43ad81c5bf50fd10ba4fa9324ed8d5dc969c40e1e5acdc3040736111febd129d",
+      "source": "artifacts/sha256/43ad81c5bf50fd10ba4fa9324ed8d5dc969c40e1e5acdc3040736111febd129d/block-file_manager/file_manager/mod.rs",
+      "target": "@components/file_manager/mod.rs"
+    }
+  ],
+  "kind": "block",
+  "license": "MIT OR Apache-2.0",
+  "name": "file_manager",
+  "registry": "@proa",
+  "rustModules": [
+    {
+      "modules": [
+        "file_manager"
+      ],
+      "target": "@components/mod.rs"
+    }
+  ],
+  "schemaVersion": 1,
+  "tier": "free",
+  "version": "sha256:2e2f71b1fcd3f142f81e2eafab092316ca726ae80f62a86c3f506c648bc8fe7d"
+}

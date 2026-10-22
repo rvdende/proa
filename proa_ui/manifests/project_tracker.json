@@ -1,0 +1,34 @@
+{
+  "$schema": "https://proa.so/schema/ui-component-manifest-v1.json",
+  "cargoDependencies": [],
+  "dependencies": [
+    "@proa/foundation",
+    "avatar",
+    "badge",
+    "button",
+    "progress",
+    "table"
+  ],
+  "files": [
+    {
+      "sha256": "sha256:e3504d15470273d90814819867f2c2eb70849618dff01d600155b2040f2fe840",
+      "source": "artifacts/sha256/e3504d15470273d90814819867f2c2eb70849618dff01d600155b2040f2fe840/block-project_tracker/project_tracker/mod.rs",
+      "target": "@components/project_tracker/mod.rs"
+    }
+  ],
+  "kind": "block",
+  "license": "MIT OR Apache-2.0",
+  "name": "project_tracker",
+  "registry": "@proa",
+  "rustModules": [
+    {
+      "modules": [
+        "project_tracker"
+      ],
+      "target": "@components/mod.rs"
+    }
+  ],
+  "schemaVersion": 1,
+  "tier": "free",
+  "version": "sha256:ae85b59560f176477bf640b76a33ba4a7e220a4150bee8e6c19e095ea3806a21"
+}

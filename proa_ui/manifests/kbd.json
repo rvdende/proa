@@ -1,0 +1,44 @@
+{
+  "$schema": "https://proa.so/schema/ui-component-manifest-v1.json",
+  "cargoDependencies": [],
+  "dependencies": [
+    "@proa/foundation"
+  ],
+  "files": [
+    {
+      "sha256": "sha256:41246a4eb8da6b95b2c0ef092a211759845fb706be211cc74860123a8e8269b5",
+      "source": "artifacts/sha256/41246a4eb8da6b95b2c0ef092a211759845fb706be211cc74860123a8e8269b5/kbd/kbd/kbd.rs",
+      "target": "@components/kbd/kbd.rs"
+    },
+    {
+      "sha256": "sha256:2c39869c1304c4f41a17d86f405b140a32836ffd917ae3e06caa38c637ab39ca",
+      "source": "artifacts/sha256/2c39869c1304c4f41a17d86f405b140a32836ffd917ae3e06caa38c637ab39ca/kbd/kbd/md.rs",
+      "target": "@components/kbd/md.rs"
+    },
+    {
+      "sha256": "sha256:4f077ef54305274179156073b96f3abbc4860192e84c50448a6c7a6296257111",
+      "source": "artifacts/sha256/4f077ef54305274179156073b96f3abbc4860192e84c50448a6c7a6296257111/kbd/kbd/mod.rs",
+      "target": "@components/kbd/mod.rs"
+    },
+    {
+      "sha256": "sha256:2e707e9ab8db132e8b1c91678584c5b8d7785b27789dda57debb074af2ef85c1",
+      "source": "artifacts/sha256/2e707e9ab8db132e8b1c91678584c5b8d7785b27789dda57debb074af2ef85c1/kbd/kbd/recipe.rs",
+      "target": "@components/kbd/recipe.rs"
+    }
+  ],
+  "kind": "component",
+  "license": "MIT OR Apache-2.0",
+  "name": "kbd",
+  "registry": "@proa",
+  "rustModules": [
+    {
+      "modules": [
+        "kbd"
+      ],
+      "target": "@components/mod.rs"
+    }
+  ],
+  "schemaVersion": 1,
+  "tier": "free",
+  "version": "sha256:b914bd2438ad3456180b238132e1136b9290c45c051a9241d56989779520903e"
+}

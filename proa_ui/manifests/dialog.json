@@ -1,0 +1,45 @@
+{
+  "$schema": "https://proa.so/schema/ui-component-manifest-v1.json",
+  "cargoDependencies": [],
+  "dependencies": [
+    "@proa/foundation",
+    "button"
+  ],
+  "files": [
+    {
+      "sha256": "sha256:e02f57ad81f3e69f99d58078a8bd2b5b2ef1a9c3eb624976a9c911dd6c297033",
+      "source": "artifacts/sha256/e02f57ad81f3e69f99d58078a8bd2b5b2ef1a9c3eb624976a9c911dd6c297033/dialog/dialog/dialog.rs",
+      "target": "@components/dialog/dialog.rs"
+    },
+    {
+      "sha256": "sha256:e0b98ec1bc092fd204acd571c501728104f65e006b4b04078031d89dc40454be",
+      "source": "artifacts/sha256/e0b98ec1bc092fd204acd571c501728104f65e006b4b04078031d89dc40454be/dialog/dialog/md.rs",
+      "target": "@components/dialog/md.rs"
+    },
+    {
+      "sha256": "sha256:ff7db9cbf991507c53a2de8a091ea5084e0c76ae745dc0d574bd684f8cead428",
+      "source": "artifacts/sha256/ff7db9cbf991507c53a2de8a091ea5084e0c76ae745dc0d574bd684f8cead428/dialog/dialog/mod.rs",
+      "target": "@components/dialog/mod.rs"
+    },
+    {
+      "sha256": "sha256:bdedb662e4d2d02def064da974c9e6cadcee22f6f2f45b872d67e6951b828fcf",
+      "source": "artifacts/sha256/bdedb662e4d2d02def064da974c9e6cadcee22f6f2f45b872d67e6951b828fcf/dialog/dialog/recipe.rs",
+      "target": "@components/dialog/recipe.rs"
+    }
+  ],
+  "kind": "component",
+  "license": "MIT OR Apache-2.0",
+  "name": "dialog",
+  "registry": "@proa",
+  "rustModules": [
+    {
+      "modules": [
+        "dialog"
+      ],
+      "target": "@components/mod.rs"
+    }
+  ],
+  "schemaVersion": 1,
+  "tier": "free",
+  "version": "sha256:0d4b85d3e92d13a5380453424b1ec3979c22c0de11fcd2baf751ea74dffc422d"
+}

@@ -1,0 +1,44 @@
+{
+  "$schema": "https://proa.so/schema/ui-component-manifest-v1.json",
+  "cargoDependencies": [],
+  "dependencies": [
+    "@proa/foundation"
+  ],
+  "files": [
+    {
+      "sha256": "sha256:d607189c6d5fa393592788ba7d84b0bd126721f68d5a761953bb57e0a0c12a14",
+      "source": "artifacts/sha256/d607189c6d5fa393592788ba7d84b0bd126721f68d5a761953bb57e0a0c12a14/theme_toggle/theme_toggle/md.rs",
+      "target": "@components/theme_toggle/md.rs"
+    },
+    {
+      "sha256": "sha256:417df9a2c78e242d093aae747ceb32bcd3d05ca05fbf44ddd01b65b4aa4cad6a",
+      "source": "artifacts/sha256/417df9a2c78e242d093aae747ceb32bcd3d05ca05fbf44ddd01b65b4aa4cad6a/theme_toggle/theme_toggle/mod.rs",
+      "target": "@components/theme_toggle/mod.rs"
+    },
+    {
+      "sha256": "sha256:68dc1a8c1fc276acadd100d050d009ecad1346683a162708beb081bd25ce8bb0",
+      "source": "artifacts/sha256/68dc1a8c1fc276acadd100d050d009ecad1346683a162708beb081bd25ce8bb0/theme_toggle/theme_toggle/recipe.rs",
+      "target": "@components/theme_toggle/recipe.rs"
+    },
+    {
+      "sha256": "sha256:72389853e773a60de34b36d5c657a3fe7905a5bff8c739f0fbf939c4499d2346",
+      "source": "artifacts/sha256/72389853e773a60de34b36d5c657a3fe7905a5bff8c739f0fbf939c4499d2346/theme_toggle/theme_toggle/theme_toggle.rs",
+      "target": "@components/theme_toggle/theme_toggle.rs"
+    }
+  ],
+  "kind": "component",
+  "license": "MIT OR Apache-2.0",
+  "name": "theme_toggle",
+  "registry": "@proa",
+  "rustModules": [
+    {
+      "modules": [
+        "theme_toggle"
+      ],
+      "target": "@components/mod.rs"
+    }
+  ],
+  "schemaVersion": 1,
+  "tier": "free",
+  "version": "sha256:ac7aeab6755852cd6802bc03e7d8e07f3dd062cf568153d77295b02b4d39d4fd"
+}

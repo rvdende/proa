@@ -1,0 +1,35 @@
+{
+  "$schema": "https://proa.so/schema/ui-component-manifest-v1.json",
+  "cargoDependencies": [],
+  "dependencies": [
+    "@proa/foundation",
+    "button",
+    "card",
+    "input",
+    "label",
+    "switch",
+    "textarea"
+  ],
+  "files": [
+    {
+      "sha256": "sha256:9f0fe473fb58a35fb5ed1120e05264c236f5573972cf8ff7b46d9fa87d24c315",
+      "source": "artifacts/sha256/9f0fe473fb58a35fb5ed1120e05264c236f5573972cf8ff7b46d9fa87d24c315/block-account_settings/account_settings/mod.rs",
+      "target": "@components/account_settings/mod.rs"
+    }
+  ],
+  "kind": "block",
+  "license": "MIT OR Apache-2.0",
+  "name": "account_settings",
+  "registry": "@proa",
+  "rustModules": [
+    {
+      "modules": [
+        "account_settings"
+      ],
+      "target": "@components/mod.rs"
+    }
+  ],
+  "schemaVersion": 1,
+  "tier": "free",
+  "version": "sha256:ddabee0c01e247a40f972e9df63ab8acdebe62d2325014b24722289b8525727b"
+}

@@ -1,0 +1,44 @@
+{
+  "$schema": "https://proa.so/schema/ui-component-manifest-v1.json",
+  "cargoDependencies": [],
+  "dependencies": [
+    "@proa/foundation"
+  ],
+  "files": [
+    {
+      "sha256": "sha256:178c059f81758d7109930b10a617c723a3011817c7235482eb4f5422046d17ba",
+      "source": "artifacts/sha256/178c059f81758d7109930b10a617c723a3011817c7235482eb4f5422046d17ba/textarea/textarea/md.rs",
+      "target": "@components/textarea/md.rs"
+    },
+    {
+      "sha256": "sha256:de582fb6b426d02c786baf8123997f0fa91e85a63e71484c7989f5dafabc3525",
+      "source": "artifacts/sha256/de582fb6b426d02c786baf8123997f0fa91e85a63e71484c7989f5dafabc3525/textarea/textarea/mod.rs",
+      "target": "@components/textarea/mod.rs"
+    },
+    {
+      "sha256": "sha256:4ee2cd3f51bb894d0f6d7e407ba78d438f96b295d8e368aebe9489d409eb839d",
+      "source": "artifacts/sha256/4ee2cd3f51bb894d0f6d7e407ba78d438f96b295d8e368aebe9489d409eb839d/textarea/textarea/recipe.rs",
+      "target": "@components/textarea/recipe.rs"
+    },
+    {
+      "sha256": "sha256:6671708c1d9e51372b1dae692f383d8532378a9d5a09f5354fc65571be874da5",
+      "source": "artifacts/sha256/6671708c1d9e51372b1dae692f383d8532378a9d5a09f5354fc65571be874da5/textarea/textarea/textarea.rs",
+      "target": "@components/textarea/textarea.rs"
+    }
+  ],
+  "kind": "component",
+  "license": "MIT OR Apache-2.0",
+  "name": "textarea",
+  "registry": "@proa",
+  "rustModules": [
+    {
+      "modules": [
+        "textarea"
+      ],
+      "target": "@components/mod.rs"
+    }
+  ],
+  "schemaVersion": 1,
+  "tier": "free",
+  "version": "sha256:c0b7b55673a6029850c32d2fbda22ce0a1202c7d81a38c9c4bba714a1d81907e"
+}

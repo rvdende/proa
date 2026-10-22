@@ -1,0 +1,33 @@
+{
+  "$schema": "https://proa.so/schema/ui-component-manifest-v1.json",
+  "cargoDependencies": [],
+  "dependencies": [
+    "@proa/foundation",
+    "button",
+    "card",
+    "field",
+    "input"
+  ],
+  "files": [
+    {
+      "sha256": "sha256:d06f3ded85205f921a80fb8d41f87e7b3c5445b7c6aa8c6c02940c293098f367",
+      "source": "artifacts/sha256/d06f3ded85205f921a80fb8d41f87e7b3c5445b7c6aa8c6c02940c293098f367/block-login_split/login_split/mod.rs",
+      "target": "@components/login_split/mod.rs"
+    }
+  ],
+  "kind": "block",
+  "license": "MIT OR Apache-2.0",
+  "name": "login_split",
+  "registry": "@proa",
+  "rustModules": [
+    {
+      "modules": [
+        "login_split"
+      ],
+      "target": "@components/mod.rs"
+    }
+  ],
+  "schemaVersion": 1,
+  "tier": "free",
+  "version": "sha256:a115213c6b2f5b1246161781f33762cf4a38f821315edb9105bdd830887064b0"
+}

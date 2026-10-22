@@ -1,0 +1,33 @@
+{
+  "$schema": "https://proa.so/schema/ui-component-manifest-v1.json",
+  "cargoDependencies": [],
+  "dependencies": [
+    "@proa/foundation",
+    "badge",
+    "button",
+    "input",
+    "table"
+  ],
+  "files": [
+    {
+      "sha256": "sha256:4e1f34efb8af14582f71f986a90a59a0b386fb726421aba4a12c91430adbe644",
+      "source": "artifacts/sha256/4e1f34efb8af14582f71f986a90a59a0b386fb726421aba4a12c91430adbe644/block-inventory_management/inventory_management/mod.rs",
+      "target": "@components/inventory_management/mod.rs"
+    }
+  ],
+  "kind": "block",
+  "license": "MIT OR Apache-2.0",
+  "name": "inventory_management",
+  "registry": "@proa",
+  "rustModules": [
+    {
+      "modules": [
+        "inventory_management"
+      ],
+      "target": "@components/mod.rs"
+    }
+  ],
+  "schemaVersion": 1,
+  "tier": "free",
+  "version": "sha256:4c6e4676a8281199600bb4d1e7f236ca9d43071b5a774c3db5d4dc194b56d20a"
+}

@@ -1,0 +1,32 @@
+{
+  "$schema": "https://proa.so/schema/ui-component-manifest-v1.json",
+  "cargoDependencies": [],
+  "dependencies": [
+    "@proa/foundation",
+    "button",
+    "card",
+    "progress"
+  ],
+  "files": [
+    {
+      "sha256": "sha256:f3b5ddee8cfbb6def52779481270c0b3aa05f1c4ef652fdbe535413f70996fd2",
+      "source": "artifacts/sha256/f3b5ddee8cfbb6def52779481270c0b3aa05f1c4ef652fdbe535413f70996fd2/block-onboarding/onboarding/mod.rs",
+      "target": "@components/onboarding/mod.rs"
+    }
+  ],
+  "kind": "block",
+  "license": "MIT OR Apache-2.0",
+  "name": "onboarding",
+  "registry": "@proa",
+  "rustModules": [
+    {
+      "modules": [
+        "onboarding"
+      ],
+      "target": "@components/mod.rs"
+    }
+  ],
+  "schemaVersion": 1,
+  "tier": "free",
+  "version": "sha256:df8399b0b6b5b72d00ae82b421bbc302dbcd541d4fe341b33b837d3bac3e6728"
+}

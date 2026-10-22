@@ -1,0 +1,41 @@
+{
+  "$schema": "https://proa.so/schema/ui-component-manifest-v1.json",
+  "cargoDependencies": [
+    {
+      "git": "https://github.com/Proa-Labs/proa.git",
+      "name": "rsjs"
+    },
+    {
+      "git": "https://github.com/Proa-Labs/proa.git",
+      "name": "rsjs_macros"
+    }
+  ],
+  "dependencies": [
+    "@proa/foundation",
+    "avatar",
+    "card",
+    "input"
+  ],
+  "files": [
+    {
+      "sha256": "sha256:84cb1038e51730297f2c522df37ed2551e4a7d6d97c5861ebd4b0f62c69f11a1",
+      "source": "artifacts/sha256/84cb1038e51730297f2c522df37ed2551e4a7d6d97c5861ebd4b0f62c69f11a1/block-email_inbox/email_inbox/mod.rs",
+      "target": "@components/email_inbox/mod.rs"
+    }
+  ],
+  "kind": "block",
+  "license": "MIT OR Apache-2.0",
+  "name": "email_inbox",
+  "registry": "@proa",
+  "rustModules": [
+    {
+      "modules": [
+        "email_inbox"
+      ],
+      "target": "@components/mod.rs"
+    }
+  ],
+  "schemaVersion": 1,
+  "tier": "free",
+  "version": "sha256:af67a1f4a6876c2df4313668c7999f4b71a7c0a3b9c8e18e21acac28609b8eeb"
+}

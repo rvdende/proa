@@ -1,0 +1,31 @@
+{
+  "$schema": "https://proa.so/schema/ui-component-manifest-v1.json",
+  "cargoDependencies": [],
+  "dependencies": [
+    "@proa/foundation",
+    "badge",
+    "card"
+  ],
+  "files": [
+    {
+      "sha256": "sha256:7b08d2b9e68d0d87581a0ccce4e8d5ca6eda98b0931384bd6ed487fcb8deed6e",
+      "source": "artifacts/sha256/7b08d2b9e68d0d87581a0ccce4e8d5ca6eda98b0931384bd6ed487fcb8deed6e/block-features_bento/features_bento/mod.rs",
+      "target": "@components/features_bento/mod.rs"
+    }
+  ],
+  "kind": "block",
+  "license": "MIT OR Apache-2.0",
+  "name": "features_bento",
+  "registry": "@proa",
+  "rustModules": [
+    {
+      "modules": [
+        "features_bento"
+      ],
+      "target": "@components/mod.rs"
+    }
+  ],
+  "schemaVersion": 1,
+  "tier": "free",
+  "version": "sha256:932bbdd124cb6aea04769f2143976ca07a03e00aac742de1e4ecd863b5346976"
+}

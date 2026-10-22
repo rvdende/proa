@@ -1,0 +1,44 @@
+{
+  "$schema": "https://proa.so/schema/ui-component-manifest-v1.json",
+  "cargoDependencies": [],
+  "dependencies": [
+    "@proa/foundation"
+  ],
+  "files": [
+    {
+      "sha256": "sha256:c1f1b3f80bd453dba4e8eb7d8553adc1e390a6242bc57b68557a4740e186a039",
+      "source": "artifacts/sha256/c1f1b3f80bd453dba4e8eb7d8553adc1e390a6242bc57b68557a4740e186a039/checkbox/checkbox/checkbox.rs",
+      "target": "@components/checkbox/checkbox.rs"
+    },
+    {
+      "sha256": "sha256:cc2c46afec5d31faa018cf1e3156fbe5172348e5c7f5e7ffeac0f609d0b82367",
+      "source": "artifacts/sha256/cc2c46afec5d31faa018cf1e3156fbe5172348e5c7f5e7ffeac0f609d0b82367/checkbox/checkbox/md.rs",
+      "target": "@components/checkbox/md.rs"
+    },
+    {
+      "sha256": "sha256:bd528f50d3a155a52a59b2e49c2ff55ec0229127a59822f3ea75a126df7a6847",
+      "source": "artifacts/sha256/bd528f50d3a155a52a59b2e49c2ff55ec0229127a59822f3ea75a126df7a6847/checkbox/checkbox/mod.rs",
+      "target": "@components/checkbox/mod.rs"
+    },
+    {
+      "sha256": "sha256:3dc4c92a0403ef68ae8cc040eb5f6d2fe70c9b88e95244d519d476186e186dac",
+      "source": "artifacts/sha256/3dc4c92a0403ef68ae8cc040eb5f6d2fe70c9b88e95244d519d476186e186dac/checkbox/checkbox/recipe.rs",
+      "target": "@components/checkbox/recipe.rs"
+    }
+  ],
+  "kind": "component",
+  "license": "MIT OR Apache-2.0",
+  "name": "checkbox",
+  "registry": "@proa",
+  "rustModules": [
+    {
+      "modules": [
+        "checkbox"
+      ],
+      "target": "@components/mod.rs"
+    }
+  ],
+  "schemaVersion": 1,
+  "tier": "free",
+  "version": "sha256:b99f0bec2153caf6aa6e88f81f37c9042b7f1ea8b9b79ff83d73b813a3f5b747"
+}
