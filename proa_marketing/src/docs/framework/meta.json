@@ -27,6 +27,7 @@
     "---Production---",
     "environment",
     "deployment",
+    "static-export",
     "railway",
     "coolify",
     "docker"

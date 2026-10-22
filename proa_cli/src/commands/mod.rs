@@ -15,6 +15,7 @@ mod config;
 pub(crate) mod db;
 mod deploy;
 mod dev;
+mod export;
 mod fmt;
 mod font;
 mod generate;
@@ -51,6 +52,8 @@ pub(crate) enum Command {
     Deploy(deploy::DeployArgs),
     /// Build assets and compile one exact Proa binary through the linked RSJS pipeline.
     Build(build::BuildArgs),
+    /// Render a built release's pages and the assets they reference into static files.
+    Export(export::ExportArgs),
     /// Create, migrate, inspect, reset, or remove the configured database.
     Db(db::DbArgs),
     /// Compile and run one exact Proa binary through the linked RSJS pipeline.
@@ -95,6 +98,7 @@ pub(crate) fn dispatch(command: Command) -> Result<()> {
         Command::Dev(args) => dev::run(args),
         Command::Deploy(args) => deploy::run(args),
         Command::Build(args) => build::run(args),
+        Command::Export(args) => export::run(args),
         Command::Db(args) => db::run(args),
         Command::Run(args) => run::run(args),
         Command::Start(args) => start::run(args),

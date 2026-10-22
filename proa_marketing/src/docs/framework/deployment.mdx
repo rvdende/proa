@@ -25,6 +25,8 @@ Proa builds one release binary plus a `public/` directory. Every target below ru
 
 **Choose [Coolify](/docs/framework/coolify)** when you want a fixed monthly bill, data residency on hardware you control, or several apps sharing one box.
 
+**Choose [static export](/docs/framework/static-export)** when every visitor sees the same pages and you want them on GitHub Pages, a bucket, or a CDN with no server at all.
+
 **Choose [Docker](/docs/framework/docker)** when you are running Proa as a sidecar next to an existing app, deploying into Kubernetes, Nomad, or ECS, or working somewhere a PaaS is not an option. Read the next section first.
 
 ## What self-managed Docker costs you
@@ -236,6 +238,8 @@ trailing-slash form (`/apps/demo/`).
   - Deploy a Proa app to Coolify on your own VPS.
 - [Docker](/docs/framework/docker)
   - Run the Proa image yourself, and own everything a platform would have done.
+- [Static export](/docs/framework/static-export)
+  - Render the site into plain files for GitHub Pages or any static host.
 - [CI / GitHub Actions](/docs/guides/ci)
   - Gate pull requests with proa check, then deploy from the same pipeline.
 - [Environment variables](/docs/framework/environment)

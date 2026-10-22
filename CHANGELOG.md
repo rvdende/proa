@@ -4,6 +4,12 @@ All notable public changes are tracked here.
 
 ## Unreleased
 
+- `proa export` renders a built release into static files for GitHub Pages,
+  object stores, and CDNs. The release binary renders each route through its
+  own router in process when `PROA_STATIC_EXPORT` is set, so no server or
+  crawler is involved; pages, the assets they reference, `public/` files and a
+  `404.html` are written, honoring `--base-path`.
+
 - Prepare the initial crates.io release of the reusable Proa stack and CLI.
   Generated projects use crates.io versions and require no GitHub credentials.
   The JSON and Tailwind helpers publish under Proa-prefixed package names while

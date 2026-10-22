@@ -37,6 +37,10 @@ pub enum ShutdownOutcome {
 /// Ordinary in-flight requests may finish. If the deadline expires, remaining
 /// connection tasks are aborted, which drops their response bodies and
 /// propagates cancellation into Proa streaming responses.
+///
+/// A process `proa export` started ([`STATIC_EXPORT_ENV`](crate::STATIC_EXPORT_ENV)
+/// set) renders its static export instead and returns without serving; see
+/// [`static_export`](crate::static_export).
 pub async fn serve(
     listener: TcpListener,
     app: Router,
@@ -60,6 +64,19 @@ pub async fn serve_with_shutdown<F>(
 where
     F: Future<Output = ()> + Send,
 {
+    // `proa export` sets `PROA_STATIC_EXPORT`: render the routes it names
+    // through `app` in process, write them out, and return without serving.
+    if let Some(spec) = crate::static_export::spec_from_env() {
+        let spec = spec?;
+        drop(listener);
+        let report = crate::static_export::export(app, &spec).await?;
+        tracing::info!(
+            files = report.files.len(),
+            out_dir = %spec.out_dir.display(),
+            "static export written"
+        );
+        return Ok(ShutdownOutcome::Drained);
+    }
     // `proa dev` sets `PROA_DEV_RELOAD_PORT` on the server processes it
     // spawns, which is the only way this layer is ever built. A production
     // start pays one environment read here and nothing after it.

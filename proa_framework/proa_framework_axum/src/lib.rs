@@ -21,6 +21,7 @@ pub mod rsjs_assets;
 pub mod security_headers;
 pub mod server;
 pub mod shard;
+pub mod static_export;
 pub mod static_service;
 pub use asset_urls::base_path_assets;
 
@@ -49,6 +50,7 @@ pub use rsjs_assets::rsjs_assets_router;
 pub use security_headers::{FrameOptions, SecurityHeadersConfig, SecurityHeadersLayer};
 pub use server::{serve, serve_with_shutdown, ShutdownOutcome, DEFAULT_GRACEFUL_SHUTDOWN_TIMEOUT};
 pub use shard::{ShardCache, ShardCacheConfig};
+pub use static_export::{StaticExportReport, StaticExportSpec, STATIC_EXPORT_ENV};
 pub use static_service::EmbeddedStaticService;
 
 use std::collections::HashMap;

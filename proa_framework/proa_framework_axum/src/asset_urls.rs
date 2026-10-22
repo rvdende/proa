@@ -250,10 +250,30 @@ fn apply_edits(source: &str, mut edits: Vec<Edit>) -> String {
 }
 
 pub(crate) fn rewrite_css(source: &str, base: &BasePath) -> Result<String, String> {
+    let edits = css_url_edits(source, &mut |url| application_url(base, url))?;
+    Ok(apply_edits(source, edits))
+}
+
+/// Every URL a stylesheet references through `url()`, `@import` or
+/// `image-set()`, as written.
+pub(crate) fn css_urls(source: &str) -> Result<Vec<String>, String> {
+    let mut urls = Vec::new();
+    css_url_edits(source, &mut |url| {
+        urls.push(url.to_owned());
+        None
+    })?;
+    Ok(urls)
+}
+
+/// Visit every URL in a stylesheet; `map` returns the replacement, if any.
+fn css_url_edits(
+    source: &str,
+    map: &mut dyn FnMut(&str) -> Option<String>,
+) -> Result<Vec<Edit>, String> {
     use cssparser::{Parser, ParserInput, Token};
     fn visit<'i>(
         parser: &mut Parser<'i, '_>,
-        base: &BasePath,
+        map: &mut dyn FnMut(&str) -> Option<String>,
         edits: &mut Vec<Edit>,
         depth: usize,
         image_set: bool,
@@ -276,30 +296,29 @@ pub(crate) fn rewrite_css(source: &str, base: &BasePath) -> Result<String, Strin
                     continue;
                 }
                 Token::UnquotedUrl(url) => {
-                    replacement = application_url(base, &url).map(|url| (url, true));
+                    replacement = map(&url).map(|url| (url, true));
                 }
                 Token::QuotedString(url) if import || image_set => {
-                    replacement = application_url(base, &url).map(|url| (url, false));
+                    replacement = map(&url).map(|url| (url, false));
                 }
                 Token::Function(name) if name.eq_ignore_ascii_case("url") => {
                     let url =
                         parser.parse_nested_block(|nested| Ok(nested.expect_string_cloned()?))?;
-                    replacement = application_url(base, &url).map(|url| (url, true));
+                    replacement = map(&url).map(|url| (url, true));
                 }
                 Token::Function(name)
                     if name.eq_ignore_ascii_case("image-set")
                         || name.eq_ignore_ascii_case("-webkit-image-set") =>
                 {
                     parser
-                        .parse_nested_block(|nested| visit(nested, base, edits, depth + 1, true))?;
+                        .parse_nested_block(|nested| visit(nested, map, edits, depth + 1, true))?;
                 }
                 Token::Function(_)
                 | Token::CurlyBracketBlock
                 | Token::SquareBracketBlock
                 | Token::ParenthesisBlock => {
-                    parser.parse_nested_block(|nested| {
-                        visit(nested, base, edits, depth + 1, false)
-                    })?;
+                    parser
+                        .parse_nested_block(|nested| visit(nested, map, edits, depth + 1, false))?;
                 }
                 _ => {}
             }
@@ -324,12 +343,51 @@ pub(crate) fn rewrite_css(source: &str, base: &BasePath) -> Result<String, Strin
     let mut input = ParserInput::new(source);
     let mut parser = Parser::new(&mut input);
     let mut edits = Vec::new();
-    visit(&mut parser, base, &mut edits, 0, false)
+    visit(&mut parser, map, &mut edits, 0, false)
         .map_err(|_| "invalid or excessively nested CSS URL syntax".to_string())?;
-    Ok(apply_edits(source, edits))
+    Ok(edits)
 }
 
 pub(crate) fn rewrite_js(source: &str, base: &BasePath) -> Result<String, String> {
+    let mut helper = format!(
+        "__proa_url_{:x}",
+        HexDisplay(&Sha256::digest(source.as_bytes()))
+    );
+    while source.contains(&helper) {
+        helper.push('_');
+    }
+    let (edits, dynamic) =
+        js_url_edits(source, &mut |url| application_url(base, url), Some(&helper))?;
+    let mut out = apply_edits(source, edits);
+    if dynamic {
+        let prefix = serde_json::to_string(base.as_str()).expect("serialize asset mount");
+        out.push_str(&format!("\nfunction {helper}(p){{const b={prefix};return typeof p==='string'&&p.startsWith('/')&&!p.startsWith('//')&&p!==b&&!p.startsWith(b+'/')&&!p.startsWith(b+'?')&&!p.startsWith(b+'#')?b+p:p;}}\n"));
+    }
+    Ok(out)
+}
+
+/// Every string-literal URL a script loads: static and dynamic imports,
+/// re-exports, `fetch`, workers and `new URL(.., import.meta.url)`, as written.
+pub(crate) fn js_urls(source: &str) -> Result<Vec<String>, String> {
+    let mut urls = Vec::new();
+    js_url_edits(
+        source,
+        &mut |url| {
+            urls.push(url.to_owned());
+            None
+        },
+        None,
+    )?;
+    Ok(urls)
+}
+
+/// Visit every URL a script loads; `map` returns a literal's replacement, and
+/// with a `helper` name, non-literal URLs are wrapped in a call to it.
+fn js_url_edits(
+    source: &str,
+    map: &mut dyn FnMut(&str) -> Option<String>,
+    helper: Option<&str>,
+) -> Result<(Vec<Edit>, bool), String> {
     let allocator = Allocator::default();
     let mut parsed = oxc_parser::Parser::new(&allocator, source, SourceType::unambiguous()).parse();
     // Oxc's unambiguous mode parses with script context before deciding the
@@ -344,34 +402,22 @@ pub(crate) fn rewrite_js(source: &str, base: &BasePath) -> Result<String, String
     if !semantic.errors.is_empty() {
         return Err("invalid JavaScript bindings".to_string());
     }
-    let mut helper = format!(
-        "__proa_url_{:x}",
-        HexDisplay(&Sha256::digest(source.as_bytes()))
-    );
-    while source.contains(&helper) {
-        helper.push('_');
-    }
     let mut visitor = JsUrls {
-        base,
+        map,
         scoping: semantic.semantic.scoping(),
         edits: Vec::new(),
         helper,
         dynamic: false,
     };
     visitor.visit_program(&parsed.program);
-    let mut out = apply_edits(source, visitor.edits);
-    if visitor.dynamic {
-        let prefix = serde_json::to_string(base.as_str()).expect("serialize asset mount");
-        out.push_str(&format!("\nfunction {}(p){{const b={prefix};return typeof p==='string'&&p.startsWith('/')&&!p.startsWith('//')&&p!==b&&!p.startsWith(b+'/')&&!p.startsWith(b+'?')&&!p.startsWith(b+'#')?b+p:p;}}\n", visitor.helper));
-    }
-    Ok(out)
+    Ok((visitor.edits, visitor.dynamic))
 }
 
 struct JsUrls<'s> {
-    base: &'s BasePath,
+    map: &'s mut dyn FnMut(&str) -> Option<String>,
     scoping: &'s oxc_semantic::Scoping,
     edits: Vec<Edit>,
-    helper: String,
+    helper: Option<&'s str>,
     dynamic: bool,
 }
 
@@ -412,7 +458,7 @@ impl JsUrls<'_> {
         }
     }
     fn literal(&mut self, literal: &StringLiteral<'_>) {
-        if let Some(url) = application_url(self.base, &literal.value) {
+        if let Some(url) = (self.map)(&literal.value) {
             self.edits.push(Edit {
                 span: literal.span,
                 text: serde_json::to_string(&url).expect("serialize URL literal"),
@@ -424,10 +470,13 @@ impl JsUrls<'_> {
             self.literal(literal);
             return;
         }
+        let Some(helper) = self.helper else {
+            return;
+        };
         let span = expression.span();
         self.edits.push(Edit {
             span: Span::new(span.start, span.start),
-            text: format!("{}(", self.helper),
+            text: format!("{helper}("),
         });
         self.edits.push(Edit {
             span: Span::new(span.end, span.end),

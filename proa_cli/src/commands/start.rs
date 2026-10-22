@@ -3,7 +3,10 @@
 
 //! Start a previously built release artifact.
 
-use std::{path::PathBuf, process::Command};
+use std::{
+    path::{Path, PathBuf},
+    process::Command,
+};
 
 use anyhow::{bail, Context, Result};
 use clap::Args;
@@ -25,36 +28,7 @@ pub(crate) struct StartArgs {
 
 pub(crate) fn run(args: StartArgs) -> Result<()> {
     let root = resolve_config_root(args.root)?;
-    let project = config::load_project_config(&root)?;
-    let configured_binary = project
-        .application
-        .as_ref()
-        .and_then(|application| application.get("binary"))
-        .and_then(serde_json::Value::as_str)
-        .or_else(|| {
-            project
-                .application
-                .as_ref()
-                .and_then(|application| application.get("package"))
-                .and_then(serde_json::Value::as_str)
-        })
-        .unwrap_or("app");
-    let selected = args.bin.unwrap_or_else(|| {
-        PathBuf::from("target")
-            .join("release")
-            .join(configured_binary)
-    });
-    let executable = if selected.is_absolute() {
-        selected
-    } else {
-        root.join(selected)
-    };
-    if !executable.is_file() {
-        bail!(
-            "release executable not found at {}\nRun `proa build` first",
-            executable.display()
-        );
-    }
+    let executable = release_executable(&root, args.bin)?;
     let mut command = Command::new(&executable);
     command.current_dir(&root);
     if let Some(host) = args.host {
@@ -70,4 +44,40 @@ pub(crate) fn run(args: StartArgs) -> Result<()> {
         bail!("release application exited with {status}");
     }
     Ok(())
+}
+
+/// The release executable `proa build` wrote for the project at `root`: `bin`
+/// when given (relative to `root`), else the configured application binary.
+pub(crate) fn release_executable(root: &Path, bin: Option<PathBuf>) -> Result<PathBuf> {
+    let project = config::load_project_config(root)?;
+    let configured_binary = project
+        .application
+        .as_ref()
+        .and_then(|application| application.get("binary"))
+        .and_then(serde_json::Value::as_str)
+        .or_else(|| {
+            project
+                .application
+                .as_ref()
+                .and_then(|application| application.get("package"))
+                .and_then(serde_json::Value::as_str)
+        })
+        .unwrap_or("app");
+    let selected = bin.unwrap_or_else(|| {
+        PathBuf::from("target")
+            .join("release")
+            .join(configured_binary)
+    });
+    let executable = if selected.is_absolute() {
+        selected
+    } else {
+        root.join(selected)
+    };
+    if !executable.is_file() {
+        bail!(
+            "release executable not found at {}\nRun `proa build` first",
+            executable.display()
+        );
+    }
+    Ok(executable)
 }

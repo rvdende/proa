@@ -1,0 +1,89 @@
+---
+title: Static export
+description: Render a Proa site into plain files for GitHub Pages, an object store, or any host without a server.
+---
+
+`proa export` renders a built release into a directory of static files. Use it for a site whose pages are the same for every visitor, such as a project page, documentation, or a blog, hosted where nothing runs Rust: GitHub Pages, an S3 or R2 bucket, Netlify, or any CDN.
+
+```bash
+proa build --artifact-out target/site/app
+proa export --bin target/site/app --out dist
+```
+
+## How it renders
+
+The release binary does the rendering. `proa export` starts it with `PROA_STATIC_EXPORT` naming an export spec, and `proa_framework_axum::serve` sees the variable. Instead of accepting connections, it sends each route through your application's router in process, writes the responses, and returns. Requests never touch a network port, and the HTML is exactly what the server would have sent.
+
+Your `main` needs nothing new as long as it starts through `proa_framework_axum::serve` or `serve_with_shutdown`, as every generated site does.
+
+## What gets exported
+
+- **Every page route** `proa site routes` lists without parameters, and `/`.
+- **Everything those pages reference** on the same site: anchors, `src`, `href` and `srcset` attributes, import maps, module imports, and CSS `url()`s, followed recursively. That picks up hashed island modules, the RSJS runtime, fonts, and pages behind dynamic routes that an exported page links to.
+- **`public/` files** under `/static`, and `robots.txt`, `sitemap.xml`, `favicon.ico` and `manifest.webmanifest` when the site serves them.
+- **`404.html`**, from your application's not-found page when it responds with HTML.
+
+A page is written as `index.html` in a directory of its name, so `/docs` becomes `docs/index.html` and resolves with or without a trailing slash. Other responses keep their paths. A redirect becomes a small page that forwards with `<meta http-equiv="refresh">`. The output also gets an empty `.nojekyll`, which stops GitHub Pages from dropping `_`-prefixed paths.
+
+A route listed by `proa site routes` that does not answer `200` fails the export. A referenced URL that does not answer is reported as a warning and skipped.
+
+## Options
+
+| Flag | Effect |
+|---|---|
+| `--out <dir>` | Output directory, `dist` by default. A previous export there is replaced; any other non-empty directory is refused. |
+| `--base-path <prefix>` | Publish under a URL prefix. Sets `PROA_BASE_PATH` for the render; see [URL prefix deployments](/docs/framework/deployment#serving-behind-a-url-path-prefix). |
+| `--route <path>` | Also render this path, such as `/blog/first-post` behind `/blog/:slug`. Repeatable. |
+| `--no-follow` | Render only the listed routes, not what they reference. |
+| `--no-404` | Skip `404.html`. |
+| `--bin <path>` | The release executable `proa build --artifact-out` wrote. Defaults to `target/release/<binary>`, like `proa start`. |
+
+The export also writes `.proa-export.json`, listing every file and any warnings.
+
+## GitHub Pages
+
+A project site is served at `https://<user>.github.io/<repo>/`, so export with that prefix. In the repository's settings, set **Pages ▸ Source** to **GitHub Actions**, then deploy from a workflow:
+
+```yaml filename=".github/workflows/pages.yml"
+name: Pages
+on:
+  push:
+    branches: [main]
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+concurrency:
+  group: pages
+  cancel-in-progress: true
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - uses: actions/checkout@v4
+      - uses: dtolnay/rust-toolchain@stable
+      - uses: Swatinem/rust-cache@v2
+      - run: cargo install proa-cli --locked
+      - run: proa build --locked --artifact-out target/site/app
+      - run: proa export --bin target/site/app --base-path /${{ github.event.repository.name }}
+      - uses: actions/upload-pages-artifact@v3
+        with:
+          path: dist
+      - id: deployment
+        uses: actions/deploy-pages@v4
+```
+
+With a custom domain, or a `<user>.github.io` repository, drop `--base-path`.
+
+## Limits
+
+A static host serves files, so anything that needs a server at request time does not survive the export:
+
+- Forms, mutations, and [route handlers](/docs/framework/route-handlers) other than `GET`.
+- Query strings. `/?q=x` serves the same file as `/`.
+- Responses that vary by cookie, header, or [content negotiation](/docs/framework/content-negotiation). Explicit representations such as `/index.md` still export as files.
+- Data a loader fetches at request time is frozen at export time. Re-export to refresh it.
+- Island code that fetches non-literal URLs at run time. Export literal URLs, or list the paths with `--route`.
